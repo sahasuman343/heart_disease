@@ -1,0 +1,29 @@
+2022-03-20 00:52:24,229 - mylogger - INFO - Importing required Modules
+2022-03-20 00:52:26,940 - mylogger - INFO - Importing required Modules: Done
+2022-03-20 00:52:26,940 - mylogger - INFO - Loading the dataset
+2022-03-20 00:52:26,950 - mylogger - INFO - Preprocessing the dataset
+2022-03-20 00:52:26,958 - mylogger - INFO - Creating the FACET object
+2022-03-20 00:52:26,961 - mylogger - INFO - Model Initialization
+2022-03-20 00:52:26,961 - mylogger - INFO - Model Selection
+2022-03-20 00:52:26,961 - mylogger - INFO - Model Training
+2022-03-20 00:53:09,154 - mylogger - INFO - Importing required Modules
+2022-03-20 00:53:11,360 - mylogger - INFO - Importing required Modules: Done
+2022-03-20 00:53:11,360 - mylogger - INFO - Loading the dataset
+2022-03-20 00:53:11,376 - mylogger - INFO - Preprocessing the dataset
+2022-03-20 00:53:11,392 - mylogger - INFO - Creating the FACET object
+2022-03-20 00:53:11,398 - mylogger - INFO - Model Initialization
+2022-03-20 00:53:11,398 - mylogger - INFO - Model Selection
+2022-03-20 00:53:11,399 - mylogger - INFO - Model Training
+2022-03-20 00:55:36,368 - mylogger - INFO - Model Training: Done
+2022-03-20 00:55:36,375 - mylogger - INFO -      ranking_score accuracy_score                          classifier                           
+                             mean       std                      type max_depth min_samples_leaf
+rank                                                                                            
+0         0.757086       0.830401  0.036658  RandomForestClassifierDF         5               15
+1         0.757086       0.830401  0.036658  RandomForestClassifierDF         6               15
+2         0.755576       0.830407  0.037415  RandomForestClassifierDF         4               15
+3         0.752727       0.828695  0.037984  RandomForestClassifierDF         5                8
+4         0.752466       0.831390  0.039462  RandomForestClassifierDF         6                8
+5         0.748886       0.829740  0.040427  RandomForestClassifierDF         6               11
+6         0.748073       0.830407  0.041167  RandomForestClassifierDF         5               11
+7         0.747668       0.830412  0.041372  RandomForestClassifierDF         4                8
+8         0.744460       0.830429  0.042985  RandomForestClassifierDF         4               11
