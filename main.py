@@ -1,8 +1,3 @@
-import logging as log
-import src.helper.logger as logger
-log=logger.logger()
- 
-log.info("Importing required Modules")
 
  #standard imports
 import pandas as pd
@@ -18,6 +13,13 @@ from facet.data import Sample
 from facet.selection import LearnerRanker, LearnerGrid
 
 from src.etl.preprocess import Preprocess
+from src.helper.run_manager import Run_manager
+import src.helper.logger as logger
+
+runmanager=Run_manager("test_run")
+runmanager.create_output()
+log=logger.logger(runmanager.dir_name)
+
 log.info("Importing required Modules: Done")
 
 # load the diabetes dataset
@@ -67,3 +69,5 @@ log.info("Model Training: Done")
 
 # get summary report
 log.info(ranker.summary_report())
+
+#ranker.best_model_.to_pickle("models/heart_rf.pkl")

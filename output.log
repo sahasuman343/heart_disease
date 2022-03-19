@@ -27,3 +27,10 @@ rank
 6         0.748073       0.830407  0.041167  RandomForestClassifierDF         5               11
 7         0.747668       0.830412  0.041372  RandomForestClassifierDF         4                8
 8         0.744460       0.830429  0.042985  RandomForestClassifierDF         4               11
+2022-03-20 01:10:10,390 - mylogger - INFO - Importing required Modules: Done
+2022-03-20 01:10:10,390 - mylogger - INFO - Loading the dataset
+2022-03-20 01:10:10,398 - mylogger - INFO - Preprocessing the dataset
+2022-03-20 01:10:10,405 - mylogger - INFO - Creating the FACET object
+2022-03-20 01:10:10,408 - mylogger - INFO - Model Initialization
+2022-03-20 01:10:10,408 - mylogger - INFO - Model Selection
+2022-03-20 01:10:10,408 - mylogger - INFO - Model Training
