@@ -18,13 +18,13 @@ import src.helper.logger as logger
 
 runmanager=Run_manager("test_run")
 runmanager.create_output()
-log=logger.logger(runmanager.dir_name)
+log=logger.logger(runmanager.output_dir)
 
 log.info("Importing required Modules: Done")
 
 # load the diabetes dataset
 log.info("Loading the dataset")
-diabetes_df = pd.read_csv('data/HEART.csv')
+diabetes_df = pd.read_csv('data/input/HEART.csv')
 
 log.info("Preprocessing the dataset")
 pp=Preprocess(diabetes_df)
