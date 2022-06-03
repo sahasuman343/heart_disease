@@ -23,6 +23,13 @@ steps:
       python3 -m pip install --upgrade pip
       pip3 install -r requirements.txt
   displayName: 'install dependencies'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      'python3 -m src'
+      'cd data/output/'
+  displayName: "Run model training"
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: data/output/
