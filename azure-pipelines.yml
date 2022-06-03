@@ -28,17 +28,10 @@ steps:
     script: 'mkdir data/output'
   displayName: create directory
 
-- task: SonarQubePrepare@5
+- task: ArchiveFiles@2
   inputs:
-    SonarQube: 'YourSonarqubeServerEndpoint'
-    scannerMode: 'CLI'
-    configMode: 'manual'
-    cliProjectKey: 'heart_disease_build'
-
-# Run Code Analysis task
-- task: SonarQubeAnalyze@5
-
-# Publish Quality Gate Result task
-- task: SonarQubePublish@5
-  inputs:
-    pollingTimeoutSec: '300'
+    rootFolderOrFile: 'data/output/'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
