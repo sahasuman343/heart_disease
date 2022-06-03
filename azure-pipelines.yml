@@ -25,12 +25,15 @@ steps:
   #displayName: 'install dependencies'
 - task: CmdLine@2
   inputs:
-    script: 'mkdir data/output'
+    script: |
+      'mkdir $(Build.BinariesDirectory)/data/output'
+      'touch test.txt'
   displayName: create directory
 
-- task: Bash@3
+- task: ArchiveFiles@2
   inputs:
-    targetType: 'inline'
-    script: |
-      cd data/output
-      echo ls
+    rootFolderOrFile: '$(Build.BinariesDirectory)/data/output/'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
