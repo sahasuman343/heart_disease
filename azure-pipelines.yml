@@ -25,9 +25,9 @@ steps:
   #displayName: 'install dependencies'
 - task: CmdLine@2
   inputs:
-    script: |
-      'mkdir /data/output'
-      'touch test.txt'
+    script: 
+      'mkdir data/output'
+      #'touch test.txt'
   displayName: create directory
 
 - task: ArchiveFiles@2
