@@ -23,17 +23,10 @@ steps:
       #python3 -m pip install --upgrade pip
       #pip3 install -r requirements.txt
   #displayName: 'install dependencies'
-- task: CmdLine@2
-  inputs:
-    script: 
-      'mkdir data/output'
-      #'touch test.txt'
-  displayName: create directory
-
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: 'data/output/'
-    includeRootFolder: false
+    rootFolderOrFile: 
+    includeRootFolder: true
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
