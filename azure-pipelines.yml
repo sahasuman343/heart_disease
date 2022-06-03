@@ -26,13 +26,13 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      'mkdir $(Build.BinariesDirectory)/data/output'
+      'mkdir /data/output'
       'touch test.txt'
   displayName: create directory
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)/data/output/'
+    rootFolderOrFile: '/data/output/'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
