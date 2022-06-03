@@ -28,10 +28,9 @@ steps:
     script: 'mkdir data/output'
   displayName: create directory
 
-- task: ArchiveFiles@2
+- task: Bash@3
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
-    includeRootFolder: false
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
+    targetType: 'inline'
+    script: |
+      cd data/output
+      ls
