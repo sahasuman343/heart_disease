@@ -70,5 +70,5 @@ log.info("Model Training: Done")
 # get summary report
 log.info(ranker.summary_report())
 
-#ranker.best_model_.to_pickle("models/heart_rf.pkl")
+ranker.best_model_.to_pickle(f"{runmanager.output_dir}/heart_rf.pkl")
 log.info("Pipeline Run: Done")
